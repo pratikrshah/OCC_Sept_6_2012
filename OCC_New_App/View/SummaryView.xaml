@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="OCC_New_App.SummaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+
+    <GroupBox Header="Summary" Padding="15" Margin="5" FontSize="12" FontFamily="Verdana" FontWeight="Bold" Width="700" >
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding az_rules}" CanUserAddRows="False" Width="Auto" Background="Transparent" RowBackground="Transparent" HorizontalAlignment="Center" CanUserResizeColumns="True" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserSortColumns="False" Focusable="False" FontFamily="Verdana" FontSize="10" FontWeight="Medium" HorizontalGridLinesBrush="DarkGray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Rule Num" Binding="{Binding ruleName}" />
+                <DataGridTextColumn Header="Rule Description" Binding="{Binding ruleDescription}" />
+                <DataGridTextColumn Header="Status" Binding="{Binding RuleStatus}" />
+                <DataGridTextColumn Header="Rule Provision Details" Binding="{Binding rulePrivisionDetails}" />
+                <DataGridTextColumn Header="Time Taken" Binding="{Binding RuleTimeTaken}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </GroupBox>
+
+</UserControl>
